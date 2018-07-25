@@ -1,0 +1,128 @@
+<style>
+.option{
+	padding: 5px;
+    width: 250px;
+    margin:3px 0;
+}
+.correctOption{
+    background: #5cef5c;
+    padding: 5px;
+    /*width: 250px;*/
+    margin:3px 0;
+}
+.wrongOption{
+    background: #ff0101;
+    padding: 5px;
+    /*width: 250px;*/
+    margin:3px 0;
+}
+.wrongIcon{
+	float: right;
+    margin-right: -25px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #ff0101;
+}
+.correctIcon{
+	float: right;
+    margin-right: -25px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #5cef5c;
+}
+.takeTest{
+	display:none;
+}
+.goBack{
+	position:fixed;
+	top:auto;
+	bottom: 0;
+	left:0;
+	right:0;
+	background: rgba(255,255,255,0.5);
+}
+.backAll {
+	padding: 30px 70px;
+    background: rgba(0,0,0,0.7);
+    margin: 20px 0 30px 0;
+}
+h1, h2, h3, h4, h5, h6, div, span, a:hover{
+  color:#fff;
+}
+a{
+  color:#ccc;
+  text-decoration: underline;
+}
+.backGroundAll{
+	    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  /*height: calc( 100vh - 80px);*/
+
+}
+@media(max-width: 768px){
+.backGroundAll{
+
+	    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+}
+</style>
+<div class="backGroundAll" style = "background-image: url({{backGroundAll}})">
+<div class="container">
+	<div class="backAll">
+	<div class="row">
+		<h2 class="text-center"><b>Solutions</b></h2>
+		<div ng-repeat="x in X">
+				<p><b>{{x.question.question}}</b></p>
+				
+				<p class="option">
+					<div ng-if = "x.answer == 'Option1' && x.question.answer != 'Option1'" class="wrongOption">{{x.question.option1}}<span class="glyphicon glyphicon-remove wrongIcon"></span></div>
+
+					<div ng-if = "x.question.answer == 'Option1' && x.answer != 'Option1'" class="correctOption">{{x.question.option1}}</div>
+
+					<div ng-if = "x.answer != 'Option1' && x.question.answer != 'Option1'" class="">{{x.question.option1}}</div>
+
+					<div ng-if = "x.answer == 'Option1' && x.question.answer == 'Option1'" class="correctOption">{{x.question.option1}}<span class="glyphicon glyphicon-ok correctIcon"></span></div>
+				</p>
+				
+				<p class="option">
+					<div ng-if = "x.answer == 'Option2' && x.question.answer != 'Option2'" class="wrongOption">{{x.question.option2}}<span class="glyphicon glyphicon-remove wrongIcon"></span></div>
+
+					<div ng-if = "x.question.answer == 'Option2' && x.answer != 'Option2'" class="correctOption">{{x.question.option2}}</div>
+
+					<div ng-if = "x.answer != 'Option2' && x.question.answer != 'Option2'" class="">{{x.question.option2}}</div>
+
+					<div ng-if = "x.answer == 'Option2' && x.question.answer == 'Option2'" class="correctOption">{{x.question.option2}}<span class="glyphicon glyphicon-ok correctIcon"></span></div>
+				</p>
+				
+				<p class="option">
+					<div ng-if = "x.answer == 'Option3' && x.question.answer != 'Option3'" class="wrongOption">{{x.question.option3}}<span class="glyphicon glyphicon-remove wrongIcon"></span></div>
+
+					<div ng-if = "x.question.answer == 'Option3' && x.answer != 'Option3'" class="correctOption">{{x.question.option3}}</div>
+
+					<div ng-if = "x.answer != 'Option3' && x.question.answer != 'Option3'" class="">{{x.question.option3}}</div>
+
+					<div ng-if = "x.answer == 'Option3' && x.question.answer == 'Option3'" class="correctOption">{{x.question.option3}}<span class="glyphicon glyphicon-ok correctIcon"></span></div>
+
+				</p>
+				
+				<p class="option">
+					<div ng-if = "x.answer == 'Option4' && x.question.answer != 'Option4'" class="wrongOption">{{x.question.option4}}<span class="glyphicon glyphicon-remove wrongIcon"></span></div>
+						
+					<div ng-if = "x.question.answer == 'Option4' && x.answer != 'Option4'" class="correctOption">{{x.question.option4}}</div>
+
+					<div ng-if = "x.answer != 'Option4' && x.question.answer != 'Option4'" class="">{{x.question.option4}}</div>
+
+					<div ng-if = "x.answer == 'Option4' && x.question.answer == 'Option4'" class="correctOption">{{x.question.option4}}<span class="glyphicon glyphicon-ok correctIcon"></span></div>
+					
+
+				</p>
+			<hr>
+		</div>
+	</div>
+	</div>
+</div>
+<a href="#/thankyou" class="text-center goBack"><button class=" themebtn">Go back</button></a>

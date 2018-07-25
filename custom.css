@@ -1,0 +1,269 @@
+html {
+    height: auto!important;
+    width: 100%;
+    font-size: 10px;
+}
+body{
+    background: #F3F3F3!important;
+}
+div, span, p, h1, h2, h3, h4, h5, h6{
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    text-align: justify;
+}
+.marginTop{
+
+	margin-top:55px;
+}
+.reqFields{
+    color:red;
+}
+
+.fontWeight400{
+    font-weight:400!important;
+}
+
+.fixedHeader{
+
+	width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    background: #DCD7D1;
+    z-index: 9999;
+        height: 70px;
+}
+
+.takeTest,
+.themebtn{
+	background: #f37622;
+    color: #fff;
+    padding: 8px 25px;
+    font-weight: 600;
+        border: 0;
+}
+
+.takeTest:hover,
+.takeTest:focus,
+.takeTest:active,
+.takeTestHome:hover,
+.takeTestHome:focus,
+.takeTestHome:active,
+.themebtn:hover,
+.themebtn:focus,
+.themebtn:active{
+	background:#0661ae;
+	color:#fff;
+	text-decoration: none!important;
+
+
+}
+.formCss{
+        /*border: 1px solid #bbb;*/
+        min-height: 260px;
+
+    padding: 10px;
+
+}
+.formBox{
+        margin-top: 25px;
+}
+
+.timeShow{
+    color: #f77a1e;
+    font-weight: 600;
+    margin: 0;
+    font-size: 50px;
+    /*margin-top: -20px;  */
+
+}
+.timeRight{
+    margin:0!important;
+}
+
+.timeBox{
+    position: relative;
+    /*width: 150px;*/
+    background: rgba(255,255,255,0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    /* padding: 0 15px 0 0; */
+    margin: 0 auto;
+}
+
+.buttonTopMar{
+        margin-top: 50px;
+    }
+
+input[type="radio"] {
+    margin: 0px 3px!important;
+    width: 25px;
+    height: 15px;
+}
+
+/*DesktopView*/
+@media(min-width:769px){
+    .fixedHeader{
+
+        padding: 32px;
+    }
+
+    .desktopView{
+        display:block!important;
+    }
+    .mobileView{
+        display:none!important;   
+    }
+    .bannerImg img{
+            height: calc(100vh - 80px);
+    }
+    .logoCenter img{
+        left: 0;
+        position: relative;
+        margin-top: -12px;
+        /*right: 0;*/
+        /*margin: 0 auto;*/
+    }
+
+.timeBoxTop{
+    margin-top: 100px;
+}
+}
+/*MobileView*/
+
+@media(max-width:768px){
+    .mobileView{
+        display:block!important;
+    }
+    .desktopView{
+        display:none!important;
+    }
+    .bannerImg img{
+            height: auto!important;
+            margin-top:30px;
+    }
+    .logoCenter img{
+        left: 0;
+        position: absolute;
+        right: 0;
+        margin: 0 auto;
+        width:100px;
+    }
+    .buttonTopMar{
+        margin-top: 0px;
+    }
+    .marginTop{
+
+    margin-top:60px;
+}
+
+.fixedHeader{
+
+        height: 80px;
+}
+.timeBox{
+    top:0px!important;
+}
+
+
+.timeBoxTop{
+    margin-top: 150px;
+}
+
+.takeTest {
+    background: #f37622;
+    color: #fff;
+    padding: 8px 25px;
+    font-weight: 600;
+    border: 0;
+   /* width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-size: 28px;*/
+}
+
+.takeTestHome {
+    background: transparent;
+    color: #fff;
+    padding: 7px 25px;
+    font-weight: 600;
+    border: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-size: 28px;
+    text-align: center;
+}
+
+.thankYouBox{
+        margin-top: 150px;
+        margin:10px;
+}
+
+.teakeTextBoxHome{
+
+        background: #f37622;
+    color: #fff;
+    padding: 60px 25px;
+    font-weight: 600;
+    border: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 275px;
+    font-size: 28px;
+}
+.teakeTextBoxHome:hover,
+.teakeTextBoxHome:focus{
+    background: #0060af;
+}
+
+}
+
+.quizButtons{
+
+    background: #f37622!important;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 900;
+
+}
+.quizButtons:hover,
+.quizButtons:focus,
+.quizButtons:active{
+    background: #1F419B!important;
+}
+
+
+.btn2{
+    text-align: center;
+
+}
+
+.btn1{
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .btn2{
+    text-align: center;
+        margin-bottom: 23px;
+}
+
+.btn1{
+    text-align: center;
+        margin-bottom: 23px;
+}
+}
+
+
+

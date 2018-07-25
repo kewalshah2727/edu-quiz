@@ -1,0 +1,74 @@
+<style>
+.takeTest{
+	display:none;
+}
+.errorPara{
+	    color: #f00;
+    padding: 10px 8px;
+    background: rgba(249, 89, 89, 0.5);
+}
+.regBG{
+  background-size: 100%;
+    background-repeat: no-repeat;
+    /*position: absolute;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: calc(100vh - 100px);
+    padding-top:20px;
+}
+.panel-heading{
+	color:#fff!important;
+}
+.panel{
+	background: rgba(0, 0, 0, 0.7);
+}
+@media(max-width: 768px){
+  .regBG {
+    background-size: auto;
+  }
+}
+</style> 
+<div class="regBG" style="background-image:url({{regBG}}); ">
+
+<div class="container">
+	    <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<p id="formError" ng-if="myWelcome" class="text-center errorPara">{{myWelcome}}</p>
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						First Name<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter  First Name" class="form-control" ng-model="firstName" required/><br>
+						Middle Name<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter Middle Name" class="form-control" ng-model="middleName" required/><br>
+						Last Name<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter Last Name" class="form-control" ng-model="lastName" required/><br>
+						Date of birth<span class="reqFields"> * </span>  <input type="Date" placeholder = "Enter a valid date of birth" class="form-control" ng-model="dob" required/><br>
+
+						Gender<span class="reqFields"> * </span>
+						<!-- <label><input ng-model="genResult" type="radio" name="gender" ng-value="'F'">Female</label><br/>
+						<label><input ng-model="genResult" type="radio" name="gender" ng-value="'M'">Male</label><br/> -->
+
+						<p ng-repeat="g in G">
+							<lable>
+								<input ng-model="$parent.gender" type="radio" name="gender" ng-value="'{{g.id}}'">{{g.title}}
+							</lable><br>
+						</p><br>
+						<lable>
+
+						Candidate Email Id<span class="reqFields"> * </span>  <input type="email" placeholder = "Enter a valid email Id" class="form-control" ng-model="candidateEmail" required/><br>
+						Parent Email Id<span class="reqFields"> * </span>  <input type="email" placeholder = "Enter a valid email Id" class="form-control" ng-model="parentEmail" required/><br>
+						Candidate Phone Number<span class="reqFields"> * </span>  <input id="candidateMobile" type="number" placeholder = "Enter your Mobile Number" min=10 class="form-control" ng-model="candidateMobile" allow-only-numbers required/><br>
+						Parent Phone Number<span class="reqFields"> * </span>  <input id="parentMobile" type="number" placeholder = "Enter your Mobile Number" min=10 class="form-control" ng-model="parentMobile" allow-only-numbers required/><br>
+						Address<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter  Address" class="form-control" ng-model="addressLine1" required/><br><!-- <span class="reqFields"> * </span>  <input type="text" placeholder = "Address line 2" class="form-control" ng-model="addressLine2" required/><br/><br/> -->
+						City<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter city name" class="form-control" ng-model="city" required/><br>
+						Pin Code<span class="reqFields"> * </span>  <input id="pincode" type="number" placeholder = "Enter your pincode" min=6 class="form-control" ng-model="pincode" allow-only-numbers required/><br>
+						State<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter State" class="form-control" ng-model="state" required/><br>
+						School/College Name<span class="reqFields"> * </span>  <input type="text" placeholder = "Enter school/college name" class="form-control" ng-model="schoolCollegeName" required/><br>
+						<input type="checkbox" ng-model="tnc" ng-checked="tnc" name="tnc"> I accept <a href="#/terms-conditions" target="_blank"> terms and conditions</a>.	</lable>
+						<!-- <input type="button" id="submit" value="Submit" class="themebtn" ng-click="termsNcon(tnl)" /> -->
+						<p class="text-center"><a ng-click="gotoError()"><input type="button" id="submit" value="Submit" class="themebtn" ng-click="postdata(firstName, middleName, lastName, dob, genResult, candidateEmail, parentEmail,candidateMobile, parentMobile, addressLine1, city, pincode, state, schoolCollegeName, tnc)" /></a></p> <br/><br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>

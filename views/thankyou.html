@@ -1,0 +1,219 @@
+
+<script>
+  // window.fbAsyncInit = function() {
+  //   FB.init({
+  //     appId            : '150549445544266',
+  //     autoLogAppEvents : true,
+  //     xfbml            : true,
+  //     version          : 'v2.7'
+  //   });
+  // };
+
+  // (function(d, s, id){
+  //    var js, fjs = d.getElementsByTagName(s)[0];
+  //    if (d.getElementById(id)) {return;}
+  //    js = d.createElement(s); js.id = id;
+  //    js.src = "https://connect.facebook.net/en_US/sdk.js";
+  //    fjs.parentNode.insertBefore(js, fjs);
+  //  }(document, 'script', 'facebook-jssdk'));
+
+  
+//   $(window).ready(function(){
+//   (function(d, s, id){
+//      var js, fjs = d.getElementsByTagName(s)[0];
+//      if (d.getElementById(id)) {return;}
+//      js = d.createElement(s); js.id = id;
+//      js.src = "https://connect.facebook.net/en_US/all.js#version=v2.5&appId=150549445544266&status=true&cookie=true&xfbml=true"
+//      fjs.parentNode.insertBefore(js, fjs);     
+//    }(document, 'script', 'facebook-jssdk'));
+// });
+</script>
+
+<!-- <script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    hashtag : '#myFacebook',
+   quote : 'I have done this',
+    href: 'http://niitquiz.in/',
+  }, function(response){});
+}
+</script> -->
+<style>
+
+.thankYou{
+	    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px 20px;
+}
+.socialshare a{
+	    padding: 10px;
+}
+.takeTest{
+	display:none;
+}
+.scoreBox{
+  width:200px;
+  /*padding:10px 0 ;*/
+  text-align: center;
+  border:1px solid #aaa;
+      margin: 20px auto;
+}
+.textBox{
+    border: 1px solid #fff;
+    padding: 15PX;
+    background: rgba(0,0,0,0.7);
+}
+h1, h2, h3, h4, h5, h6, div, span, a:hover{
+  color:#fff;
+}
+a{
+  color:#ccc;
+  text-decoration: underline;
+}
+.socialshare{
+  margin-top: 50px;
+}
+
+
+.backALL{
+    min-height: calc( 100vh - 80px);
+    padding-top: 40px;
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+        /*height: 100vh;*/
+
+}
+.shareText{
+  color:#fff;
+  text-align: center;
+}
+@media(max-width: 768px){
+.backALL{
+
+    background-size: auto;
+
+}
+}
+</style>
+<div class="backALL" style = "background-image: url({{backGroundAll}})">
+
+<div class="container" style="background: rgba(255,255,255,0.7);padding: 30px;">
+<div class="thankYouBox" >
+  <div class="row">
+    <div class="col-md-4">
+	<div class="text-center">
+		<img ng-src={{image}} width="100%">
+	</div>
+<!--   <div class="scoreBox">
+	<h3 class="text-center" id="titleAfterScore">{{titleAfterScore}}</h3>
+  <p class="text-center">You scored {{correctAns}} / 75</p>
+    <p class="text-center "><a class="" href="#/correctAnswers">View correct answers</a></p>
+  </div> -->
+</div>
+<div class="col-md-8 textBox">
+  <h4 ng-if="C.length" class="text-center">
+    <h2 class="text-center" id="titleAfterScore"><b>{{titleAfterScore}}</b></h2>
+  <h3 class="text-center">You scored {{correctAns}} / 75</h3>
+    <p class="text-center "><a class="" href="#/correctAnswers">View correct answers</a></p>
+
+   <p class="text-center "> Congratulation on completing the <b>Test your Digital Quotient</b> Quiz</p>
+  </h4>
+	<h4 ng-if="C.length" class="text-center">
+    You have been awarded <b>{{scholarship}}</b>.
+  </h4>
+	<div ng-repeat="c in C">
+		<p class="text-center">Use the Scholarship Code {{c.couponCode}} to avail your Scholarship. </p>
+		<p class="text-center"><a class="" href="{{c.url}}" target="_blank">Enroll Now.</a> Offer Valid till {{c.validity}}</a></p>
+		<!-- <p class="text-center">{{c.couponCode}}</p> -->
+	</div>
+<!-- 	"couponsDetails": [
+            {
+                "couponUsed": true,
+                "progranmName": "CDMP",
+                "couponCode": "DQ016607",
+                "url": "https://www.training.com/digital-marketing-courses-online/certified-digital-marketing-professional",
+                "quizType": {
+                    "categoryId": 1,
+                    "name": "Digital Marketing"
+                },
+                "validity": "April 30th  2018 ",
+                "scholarshipId": 1253,
+                "badge": {
+                    "maxValue": "20",
+                    "image": "/Media/Badge/awardribbon.png",
+                    "minValue": "0",
+                    "badgeId": 1,
+                    "name": "Novice"
+                }
+
+            }
+        ], -->
+	
+
+
+<!-- <div id="shareBtn" class="btn btn-success clearfix">Share</div> -->
+
+	<!-- <p class="text-center buttonTopMar"><a class="takeTest" href="#/">Home</a></p> -->
+<div class="text-center socialshare">
+
+
+<!-- socialshare-provider="facebook" -->
+<h4 class="shareText">Share Your Results</h4>
+<a href="#/thankyou"
+socialshare
+
+socialshare-provider="facebook"
+socialshare-quote="Great! I scored {{correctAns}} out of 75, I tested my {{quizTypeName}} Skills through the Test you Digital Quotient Quiz. Test yourself and you might just win a Scholarship up to Rs. 10,000"
+socialshare-media="{{image}}"
+socialshare-hashtags="#NIIT"
+socialshare-url="http://blog.training.com/">
+
+<span class="text-center" style="font-size: 30px;"><i class="fab fa-facebook"></i></span>
+</a>
+
+
+
+
+  <a href="#/thankyou"
+socialshare
+socialshare-provider="linkedin"
+socialshare-text="Great! I scored {{correctAns}} out of 75, I tested my {{quizTypeName}} Skills through the Test you Digital Quotient Quiz. Test yourself and you might just win a Scholarship up to Rs. 10,000"
+socialshare-url="http://blog.training.com/">
+<span class="text-center" style="font-size: 30px;"><i class="fab fa-linkedin"></i></span>
+</a>
+
+
+
+
+<a href="#/thankyou"
+socialshare
+socialshare-provider="twitter"
+socialshare-text="Great! I scored {{correctAns}} out of 75, I tested my {{quizTypeName}}  Skills through the Test you Digital Quotient Quiz. Test yourself and you might just win a Scholarship up to Rs. 10,000"
+socialshare-hashtags="NIIT"
+socialshare-url="http://blog.training.com/">
+<span class="text-center" style="font-size: 30px;"><i class="fab fa-twitter"></i></span>
+</a>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+    });
+</script>

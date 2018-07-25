@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="quiz">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NIIT Quiz</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="custom.css" rel="stylesheet">
+    <!-- Custom js -->
+<script src="scripts/fb.js"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <script src = "scripts/pagination.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-route.min.js"></script>
+    <script src="bower_components/angular-socialshare/dist/angular-socialshare.js"></script>
+
+
+    <!-- bower -->
+
+    <script src="bower_components/pdf.js-viewer/pdf.js"></script>
+    <link rel="stylesheet" href="bower_components/pdf.js-viewer/viewer.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-pdfjs-viewer/dist/angular-pdfjs-viewer.js"></script>
+
+
+     <!-- font-awesome -->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+
+    </head>
+    <body>
+        <div class="fixedHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-3 logoCenter">
+                        <a href="#/"><img src="images/rsz_1logo_of_eduintuw.png" alt="NIIT"></a>
+                    </div>
+                    <!-- <span class="startQuizBanner"></span>  -->  
+                    <div class="col-md-1 col-xs-1" >
+                        <div ng-controller="homePage" class="btn1" style="position: relative;">
+                            <button ng-click="Loginbtn()" style="width: 79px" class="quizButtons"> Login </button>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-xs-1" >
+                        <div ng-controller="homePage" class="btn2" style="position: relative;">
+                            <button ng-click="Registerbtn()"  class="quizButtons">Register</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-2" >
+                        <div class="btn2">
+                            <p align="center" style="font-size: 12px;margin-top: 5px">Contact us at 88-8888-8888</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="marginTop"></div>
+            <div ng-view></div>
+    </body>
+</html>
+

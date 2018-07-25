@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<style>
+.startQuizBanner{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    /*background: rgba(255,255,255,0.3);*/
+}
+
+.takeTestDesktop{
+	    padding: 25px;
+    font-size: 45px;
+}
+.takeTestDesktop{
+	background:#0661ae;
+	color:#fff;
+	text-decoration: none!important;
+
+}
+.takeTestDesktop:hover{
+	background:#f37622;
+	color:#fff;
+	text-decoration: none!important;
+
+}
+html {
+    height: auto!important;
+    width: 100%;
+    font-size: 10px;
+}
+body{
+	background: #F3F3F3!important;
+}
+.bannerImgBG{
+	width: 100%;height: 80vh;background-size: 100% 80vh;background-repeat: no-repeat;
+}
+@media(max-width: 768px){
+
+.bannerImgBG{
+	width: 100%;
+    height: 250px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+}
+
+/*.btn2{
+	text-align: left;
+}
+
+.btn1{
+	text-align: right;
+}
+
+@media(max-width:768px){
+    .btn2{
+    text-align: center;
+        margin-bottom: 20px;
+}
+
+.btn1{
+    text-align: center;
+        margin-bottom: 20px;
+}
+}*/
+.carousel-inner img { margin: 0 auto; }
+</style>
+
+
+
+<body>
+<!-- <div class="bannerImg">
+	<div class="bannerImgBG" style="background-image: url(images/69169239-study-wallpapers.jpg);"></div>
+    	
+</div> -->
+
+
+<div class="container" style="width: 97%">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+<ol class="carousel-indicators">
+      <li  ng-repeat="x in imagelist1" data-target="#myCarousel" data-slide-to="{{$index}}" class="{'active' : $index === 0}"></li>
+    </ol>
+
+<div class="carousel-inner">
+        <div class="item" ng-class="{'active' : $index == 0}"  ng-repeat="x in imagelist1">
+            <img ng-src="{{x.values.image}}" class="img-responsive" style="width: 100%">
+     </div>
+</div>
+
+
+    <span class="left carousel-control"  data-target="#myCarousel" data-slide= "prev">
+    <span class="glyphicon glyphicon-chevron-left"></span></span>
+    <span class="right carousel-control" data-target="#myCarousel" data-slide= "next">
+    <span class="glyphicon glyphicon-chevron-right"></span></span>
+</div>
+</div>
+
+
+
+<div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <p align="center" style="font-size: 16px;margin-top: 10px;text-align: center">All rights reserved© </p>
+                    </div>
+                </div>
+</div>
+
+
+<!-- <div class="mobileView text-center teakeTextBoxHome">
+    <a class="takeTestHome" href="#/terms-conditions"><img src="images/icons8-test-passed.png" alt="NIIT">
+    	<p class="takeTestHome" >Start Test</p></a>
+</div>
+ -->
+</body>
+</html>

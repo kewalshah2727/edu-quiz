@@ -1,0 +1,139 @@
+<style>
+.wrapper{
+  margin: 60px auto;
+  text-align: center;
+}
+h1{
+  margin-bottom: 1.25em;
+}
+#pagination-demo{
+  display: inline-block;
+  margin-bottom: 1.75em;
+}
+#pagination-demo li{
+  display: inline-block;
+}
+
+.page-content{
+  background: #eee;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  max-width: 660px;
+}
+.takeTest{
+  display:none;
+}
+.question{
+  font-size: 20px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.optionsSize{
+      font-size: 18px;
+      margin-bottom: 0px;
+}
+.paraOptionsSize{
+      background: rgba(0,0,0,0.2);
+    padding: 15px;
+    width: 75%;
+    margin: 10px auto;
+}
+.last,
+.first{
+ display:none !important; 
+}
+.prev,
+.next{
+  padding:15px;
+
+}
+
+.pagination > li > a{
+  color: #fff;
+    background-color: #0060b1;
+    border-color: #0060b1;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+        width: 110px;
+}
+.pagination > li:hover > a,
+.pagination > li > a:hover
+/*.prev:hover>a,
+.prev:focus>a,
+.prev:active>a,
+.next:hover>a,
+.next:focus>a,
+.next:active>a*/
+{
+      color:#fff;
+    background-color: #f37622;
+    border-color: #f37622;
+   
+}
+.testBG{
+  background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+}
+.transBG{
+  background: rgba(255,255,255,0.8)
+}
+.buttonTopMar {
+    /* margin-top: 50px; */
+    padding-bottom: 20px;
+}
+@media(max-width: 768px){
+  .paraOptionsSize{
+    width:285px;
+  }
+  .testBG {
+    background-size: auto;
+  }
+}
+</style>
+<div class="testBG" style="background-image:url({{testBG}}); ">
+<div class="container timeBoxTop">
+  <div class="transBG">
+
+  <div ng-init="f1()">  
+      <div class="timeBox">  
+        <!--   <p class="text-right timeRight"> </p>-->
+          <p class="text-right timeRight" ></p> 
+          <h3 class="text-center timeShow" id="showtime"></h3>
+          <p class="text-center " >Seconds</p>
+      </div>            
+  <div>
+	<!-- <h2 class="text-center">Test</h2> 
+	
+	<div class="formBox" ng-repeat="x in X =(X|orderBy:randomize).slice(0, 5)"">
+ -->
+	<!-- <div ng-repeat="x in X "> -->
+		<div class="formCss">
+<div id="myForm"></div>
+</div>
+    	
+      <div class="col-sm-12 text-center">
+			
+        <ul id="pagination-demo" class="pagination-sm"></ul>
+      </div>
+    </div>
+
+    <!-- <div id="page-content" class="page-content">Page 1</div> -->
+
+
+
+		
+	<!-- </div>	 -->
+	<p class="text-center buttonTopMar"><input  class="themebtn" type="submit" name="submit" id="submit"  value="Submit" ng-click="postTest()"/></p>
+
+</div>
+</div>
+</div>
+</div>
